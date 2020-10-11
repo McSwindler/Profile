@@ -8,8 +8,8 @@ from cogs import utils
 
 class ProfileVerification(utils.Cog):
 
-    TICK_EMOJI = "<:tick_yes:596096897995899097>"
-    CROSS_EMOJI = "<:cross_no:596096897769275402>"
+    TICK_EMOJI = "\U00002714\U0000FE0F"
+    CROSS_EMOJI = "\U0000274C"
 
     async def send_profile_verification(self, user_profile:utils.UserProfile, target_user:discord.Member) -> bool:
         """Sends a profile in to the template's verification channel
