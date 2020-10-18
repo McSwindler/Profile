@@ -66,7 +66,10 @@ class UserProfile(object):
         embed = Embed(use_random_colour=True)
         if not self.template:
             raise AttributeError("Missing template field for user profile")
-        embed.title = f"{self.template.name} | {self.name}"
+        if self.template.max_profile_count == 1:
+            embed.title = f"{self.template.name}"
+        else:
+            embed.title = f"{self.template.name} | {self.name}"
         if self.template.colour:
             embed.colour = self.template.colour
 
